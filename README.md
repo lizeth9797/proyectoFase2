@@ -3,7 +3,7 @@ Proyecto Final de la Fase 2 BEDU-Santander
 
 ## Integrantes del equipo
 * Castillo Del Valle Gabriela Aideé
-* Galíndez Marco Antonio
+* Galíndez Cortés Marco Antonio
 * Karina Lizeth Ortiz Muñoz
 * García Eulogio Lourdes
 * Juliet Guadalupe Quintero Rocha
