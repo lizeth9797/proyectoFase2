@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+body {
+    background-color: $body-color;
+}
+
+h1 {
+    color: $h1-color
+}
+
+.prueba {
+    margin-top: 80px;
+}
