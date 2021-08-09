@@ -36,7 +36,7 @@ En los mockups se pueden visualizar las pantallas contempladas para la entrega d
 
 # Desarrollo:
 
-La carpeta con las configuraciones se encuentra en : [Carpeta del proyecto](https://github.com/lizeth9797/proyectoFase2/tree/produccion/entorno)
+La carpeta con las configuraciones se encuentra en : [Carpeta del proyecto](https://github.com/lizeth9797/proyectoFase2/tree/master/entorno)
 
 Dependencias principales: 
   * Webpack y Webpack Dev Server
