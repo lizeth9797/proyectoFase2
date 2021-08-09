@@ -6,7 +6,7 @@ Proyecto Final de la Fase 2 BEDU-Santander
 * Galíndez Marco Antonio
 * Karina
 * Lourdes
-* Juliet
+* Juliet Guadalupe Quintero Rocha
 
 ## Instrucciones generales
 * Mostrar en la UI un input para ingresar texto y un botón para generar la búsqueda.
