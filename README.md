@@ -26,3 +26,5 @@ La primera parte de ese proyecto y consiste en dejar listo el ambiente de desarr
 
 ## Descripcion
 Como parte de nuestra vision, hemos desarrollado los mockups contemplando la realizacion de nuestro sistema en 2 fases, la primera con las caracteristicas indicadas en las instrucciones generales y ademas una version avanzada que se ilustra la cual se llevara a cabo cuando la primera este completada.
+
+El repositorio con las configuraciones se encuentra en : [Repositorio del proyecto](https://github.com/Lulucornio/proyecto-m2)
