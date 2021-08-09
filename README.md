@@ -4,7 +4,7 @@ Proyecto Final de la Fase 2 BEDU-Santander
 ## Integrantes del equipo
 * Castillo Del Valle Gabriela Aideé
 * Galíndez Marco Antonio
-* Karina
+* Karina Lizeth Ortiz Muñoz
 * García Eulogio Lourdes
 * Juliet Guadalupe Quintero Rocha
 
@@ -17,7 +17,7 @@ Proyecto Final de la Fase 2 BEDU-Santander
 
 Nota: El acomodo de todos los elementos junto con el diseño es completamente libre, se pueden usar librerías que ayudan con la UI como Bootstrap, Foundation, Materialize, etc.
 
-## Primera parte (09/0821)
+## Primera parte (09/08/21)
 La primera parte de ese proyecto y consiste en dejar listo el ambiente de desarrollo:
 * Desarrolla los mockups de la aplicación, esto te permitirá visualizar cómo se van a acomodar todos los elementos mucho antes de crear el código. Es parte fundamental en el desarrollo del software.
 * Instalar y configurar Webpack, Babel y Webpack Dev Server.
@@ -25,6 +25,35 @@ La primera parte de ese proyecto y consiste en dejar listo el ambiente de desarr
 * Configurar los loaders necesarios para los estilos, se puede utilizar CSS o SASS.
 
 ## Descripcion
-Como parte de nuestra vision, hemos desarrollado los mockups contemplando la realizacion de nuestro sistema en 2 fases, la primera con las caracteristicas indicadas en las instrucciones generales y ademas una version avanzada que se ilustra la cual se llevara a cabo cuando la primera este completada.
+Como parte de nuestra visión, hemos desarrollado los mockups contemplando la realizacion de nuestro sistema en 2 fases, la primera con las caracteristicas indicadas en las **instrucciones generales** y la segunda con una version avanzada, la cual será desarrollada al completar la primera fase.
 
-El repositorio con las configuraciones se encuentra en : [Repositorio del proyecto](https://github.com/Lulucornio/proyecto-m2)
+## Mockups
+
+![Mockups](mockups_de_la_aplicación.jpeg)
+
+En los mockups se pueden visualizar las pantallas contempladas para la entrega de este proyecto. Los componentes titulados *Categories text* y *Countries* forman parte de la fase 2 mencionada anteriormente.
+
+
+# Desarrollo:
+
+Dependencias principales: 
+  * Webpack y Webpack Dev Server
+  * Babel
+  * Bootstrap
+
+Loaders: 
+  * style-loader
+  * css-loader
+  * babel-loader
+  * html-loader
+  * sass-loader
+  * postcss-loader
+ 
+Plugins:
+  * html-webpack-plugin
+  
+Dependencias adicionales:
+  * @babel/core
+  * @babel/preset-env
+  * @popperjs/core
+
