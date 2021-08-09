@@ -5,7 +5,7 @@ Proyecto Final de la Fase 2 BEDU-Santander
 * Castillo Del Valle Gabriela Aideé
 * Galíndez Marco Antonio
 * Karina
-* Lourdes
+* García Eulogio Lourdes
 * Juliet Guadalupe Quintero Rocha
 
 ## Instrucciones generales
