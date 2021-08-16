@@ -24,11 +24,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'recipe.html',
       template: './src/app/recipe/recipe.html'
-    }),
+    }),*/
+    ,
     new HtmlWebpackPlugin({
       filename: 'results.html',
       template: './src/app/results/results.html'
-    }) */
+    })  
   ],
 
   devServer: {

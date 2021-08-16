@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-@charset "UTF-8";
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "../node_modules/bootstrap/scss/bootstrap";
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   entorno\scss\_global.scss 1:9  @use
- *   entorno\scss\main.scss 1:1     root stylesheet */
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   ╷\a 1 │ @import \"../node_modules/bootstrap/scss/bootstrap\";\d\a   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   ╵\a   entorno\\scss\\_global.scss 1:9  @use\a   entorno\\scss\\main.scss 1:1     root stylesheet";
-}
-
-/*# sourceMappingURL=main.scss.map */
-=======
 @use 'global' as *;
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap');
 * {
@@ -89,4 +68,11 @@ body {
 .img-chef{
   max-width:45%;
 }
->>>>>>> 8b78b1862f8c504756064d70ba0e9a7711074019
+
+
+//  results html style
+ 
+  .centerResults {
+    text-align: center;
+ 
+}

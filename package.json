@@ -1,0 +1,42 @@
+{
+  "name": "proyectofase2",
+  "version": "1.0.0",
+  "description": "1. Instalar dependencias\r ``` console \r npm i\r ```",
+  "main": "index.js",
+  "dependencies": {
+    "babel-install": "^2.1.0",
+    "bootstrap": "^5.1.0",
+    "bootstrap-sass": "^3.4.1",
+    "popper.js": "^1.16.1",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizeth9797/proyectoFase2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizeth9797/proyectoFase2/issues"
+  },
+  "homepage": "https://github.com/lizeth9797/proyectoFase2#readme"
+}
