@@ -1,13 +1,69 @@
 @use 'global' as *;
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: $body-color;
 }
-
-h1 {
-    color: $h1-color
+.welcome{
+    padding-top: 4.5rem;
 }
-
-.prueba {
-    margin-top: 80px;
+.title{
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+}
+.subtitle{
+    padding-top: rem;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+}
+.card-recommendation{
+    background-color: $c3;
+}
+.card-body-recommendation{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+}
+.card-body-recommendation a:hover{
+    color: $c4;
+}
+.card-title-recommendation{
+    color: $black;
+    text-decoration: none;
+}
+.img-fluid-recommendation{
+    height: 20rem;
+    margin-top: 2.5rem;
+}
+.card-margin{
+    margin-top: 2.5rem;
+}
+.title-card{
+    position: absolute; 
+    left: 3.5rem; 
+    top: -1.5rem; 
+    background-color: $black; 
+    padding: 1rem; 
+    font-weight:bold;
+    color: $c4;
+}
+.rounded-circle {
+  border-radius: 50%!important;
+}
+.card-bg{
+  background-color: transparent;
+  border:none;
+  align-items: center;
+}
+.card-body-chef{
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Anton', sans-serif;
+}
+.img-chef{
+  max-width:45%;
 }
