@@ -16,7 +16,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'categories.html',
       template: './src/app/categories/categories.html'
-    }),
+    })/* ,
     new HtmlWebpackPlugin({
       filename: 'countries.html',
       template: './src/app/countries/countries.html'
@@ -28,7 +28,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'results.html',
       template: './src/app/results/results.html'
-    })
+    }) */
   ],
 
   devServer: {
