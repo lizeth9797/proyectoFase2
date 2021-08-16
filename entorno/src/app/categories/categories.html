@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="proyecto.css">
+    <script src="proyecto.js"></script>
+
+</head>
+
+<body>
+    <h1>Esto es el proyecto</h1>
+    <div id='agregaTabla'></div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script>
+        //Esto es el objeto que me trae la API
+        objetos = {
+            "meals": [
+                {
+                    "strCategory": "Beef"
+                },
+                {
+                    "strCategory": "Breakfast"
+                },
+                {
+                    "strCategory": "Chicken"
+                },
+                {
+                    "strCategory": "Dessert"
+                },
+                {
+                    "strCategory": "Goat"
+                },
+                {
+                    "strCategory": "Lamb"
+                },
+                {
+                    "strCategory": "Miscellaneous"
+                },
+                {
+                    "strCategory": "Pasta"
+                },
+                {
+                    "strCategory": "Pork"
+                },
+                {
+                    "strCategory": "Seafood"
+                },
+                {
+                    "strCategory": "Side"
+                },
+                {
+                    "strCategory": "Starter"
+                },
+                {
+                    "strCategory": "Tacos"
+                },
+                {
+                    "strCategory": "Tortas"
+                },
+                {
+                    "strCategory": "Pozole"
+                },
+                {
+                    "strCategory": "Vegan"
+                },
+                {
+                    "strCategory": "Vegetarian"
+                }
+            ]
+        }
+        //Creo lista con todos los platillos
+        let lista = [];
+        for ( i = 0; i <  objetos['meals'].length; i++){
+            lista.push(objetos['meals'][i]["strCategory"]);
+        }
+
+        //Creo mi tabla
+        let linea = 3,
+            html = '<table><tr>';
+        for(celda = 0; celda<lista.length; celda++){
+            html += `<td>${lista[celda]}</td>`;
+            var next = celda+1;
+            if (next%linea==0 && next!=lista.length) {
+                html += "</tr><tr>";
+            }
+        }
+        html += "</tr></table>";
+
+        //Impromo la tabla
+        document.getElementById('agregaTabla').innerHTML = html;
+
+    </script>
+
+</body>
+
+</html>

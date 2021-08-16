@@ -8,10 +8,10 @@
  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Proyecto</title>
-
+    <script src="/src/app/components/header/header.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<!--     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#">
           <img alt=" Ejemplo logo">
         </a>
@@ -30,22 +30,86 @@
             </li>
           </ul>
         </div>
-    </nav>
+    </nav> -->
 
-    <section class="prueba">
-        <h1>Prueba del ambiente de desarrollo</h1>
-        <div class="card" style="width: 18rem;">
-            <img src="../images/fondo_cerezos.jpg" class="card-img-top" alt="imagen de prueba">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+  <header-component></header-component>
+
+  <main class="welcome">
+    <h1 class="title">The MealDB</h1>
+    <h2 class="subtitle">"The best virtual recipe book"</h2>
+  </main>
+
+  <!-- RECOMMENDATION -->
+  <div class="card card-recommendation mb-3 card-margin" >
+    <div class="title-card">RECOMMENDATION</div>
+    <div class="row g-0 align-items-center">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <iframe class="img-fluid img-fluid-recommendation rounded-start" controls width="420" height="315"
+        src="https://www.youtube.com/embed/YsJXZwE5pdY">
+        </iframe> 
+      </div>
+      <div class="col-md-6">
+        <div class="card-body card-body-recommendation ">
+          <a class="card-title card-title-recommendation" href="recipe.html">Burek</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+  <!-- CAROUSEL -->
+  <div class="card card-recommendation mb-3 card-margin" >
+    <div class="title-card">NEW MEALS</div>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel urna et ante posuere egestas. Mauris est elit, aliquam sed porta eget, laoreet at augue. Proin lacinia lectus mi. Mauris commodo varius metus sit amet ullamcorper. Morbi vehicula odio massa, eu cursus nibh sagittis sed. Sed sodales, ligula vitae ultrices sollicitudin, dolor enim accumsan massa, at pulvinar enim quam quis dolor. Sed blandit justo porttitor, eleifend est in, facilisis arcu. Mauris leo mauris, congue at consequat vitae, fermentum id sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In finibus dolor at eros tempor, sit amet faucibus ligula semper. Sed ut feugiat turpis, quis fermentum elit. Nulla aliquet nec massa a euismod.
+  </div>
+
+  <!-- CHEFS -->
+  <div class="card card-recommendation mb-3 card-margin" >
+    <div class="title-card">KITCHEN EXPERTS</div>
+    <div class="row justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+      <div class="col mt-4">
+        <div class="card card-margin card-bg" style="width: 18rem;">
+          <img src="https://www.bstuari.com/155/gorro-chef-446v-gorro-cocina-combinado-cuadro-vichy-velcro-leioa-bilbao.jpg" class="card-img-top rounded-circle img-chef" alt="Chef Karina">
+          <div class="card-body card-body-chef">
+            <p class="card-text">Karina Ortiz</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card card-margin card-bg" style="width: 18rem;">
+          <img src="https://www.amikal-design.com/images/images_produits/medium/954_67_000_m-2015_01.jpg" class="card-img-top rounded-circle img-chef" alt="Chef Gabriela">
+          <div class="card-body card-body-chef">
+            <p class="card-text">Gabriela Castillo</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card card-margin card-bg" style="width: 18rem;">
+          <img src="https://monda.com.mx/wp-content/uploads/2020/01/TW-Mandil-Peto-Negro-Caballero-1-140120.jpg" class="card-img-top rounded-circle img-chef" alt="Chef Marco">
+          <div class="card-body card-body-chef">
+            <p class="card-text">Marco Galíndez</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card card-margin card-bg" style="width: 18rem;">
+          <img src="https://www.broderie-42.com/wp-content/uploads/2019/02/blouse-veste-de-chef-manches-courtes-femme-coton-polyester-blanc-textile-europe-loire-42-600x764.jpg" class="card-img-top rounded-circle img-chef" alt="Chef Lourdes">
+          <div class="card-body card-body-chef">
+            <p class="card-text">Lourdes García</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card card-margin card-bg" style="width: 18rem;">
+          <img src="https://d2m1kqghccc19k.cloudfront.net/wp-content/uploads/2017/03/04094739/CHEF01-495x600.png?mrf-size=m" class="card-img-top rounded-circle img-chef" alt="Chef Juliet">
+          <div class="card-body card-body-chef">
+            <p class="card-text">Juliet Quintero</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </body>
 </html>

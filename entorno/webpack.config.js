@@ -12,6 +12,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'categories.html',
+      template: './src/app/categories/categories.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'countries.html',
+      template: './src/app/countries/countries.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'recipe.html',
+      template: './src/app/recipe/recipe.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'results.html',
+      template: './src/app/results/results.html'
     })
   ],
 
@@ -46,37 +62,17 @@ module.exports = {
           test: /\.html$/i,
           loader: "html-loader",
         },
-
         {
           test: /\.s[ac]ss$/i,
-          use:  ["style-loader", "css-loader", "sass-loader"]
-        },
-
-        {
-          test: /\.(scss)$/,
           use: [
-            {
-              loader: 'style-loader', 
-            }, 
-            {
-              loader: 'css-loader', 
-            },
-            {
-              loader: 'postcss-loader', // Run post css actions
-              options: {
-                plugins: function () { // post css plugins, can be exported to postcss.config.js
-                  return [
-                    require('precss'),
-                    require('autoprefixer')
-                  ];
-                }
-              }
-            },
-            {
-              loader: 'sass-loader' 
-            }
-          ]
-        }
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
+          ],
+        },
     ]
   },
 
