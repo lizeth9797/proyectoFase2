@@ -6,53 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe</title>
     <link rel="stylesheet" href="./recipe.css">
+    <script src="/src/app/components/header/header.js" type="text/javascript" defer></script>
 </head>
 <body>
     
+    <header-component></header-component>
 
-    <section id = "header-section">
-
-    </section>
 
     <section id = "recipe-section">
+
         <div id = "recipe-div">
             <div>
                 <h1 id="foodName-title"></h1>
                 <div class="row" id="conjunto-div">
+
                     <div class="col" id="vertical-div">
                         <div class="card"  id = "presentation-div">
                             <div class="card-body">
                               <h5 class="card-title">Presentation</h5>
                               <img id ="recipe-img" class="img-fluid" alt="Food">
                             </div>
-                            
                         </div>
     
                         <div class="card" id ="ingredients-div">
                             <div class="card-body">
-                              <h5 class="card-title">Ingredients</h5>
-                              
-                                <div class="container" id = "ingredients-list">
-
-                                </div>
-                              
+                                <h5 class="card-title">Ingredients</h5>
+                                <div class="container" id = "ingredients-list"></div>
                             </div>
                         </div>
                     </div>
-
 
                     <div class="col">
                         <div class="card">
                             <div class="card-body" id="instructions-card" >
                               <h5 class="card-title">Instructions</h5>
                               <div id="instructions-div" class="justify-content-center">
-                                  <ol>                             
-                                  </ol>
+                                  <ol></ol>
                               </div>
                             </div>
                         </div>
                     </div>
-
 
                 </div>
 
@@ -67,18 +60,14 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <div id= "arrows-div">
-
-                </div>
-
+                <div id= "arrows-div"></div>
             </div>
-
         </div>
     </section>
-    
+
     <script src="./recipe.js"></script>
+    <script src="../components/header/header.js" type="text/javascript" defer></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Proyecto</title>
     <script src="/src/app/components/header/header.js" type="text/javascript" defer></script>
+    <script src="/src/app/components/searchBar/searchBar.js" type="text/javascript" defer></script>
 </head>
 <body>
   
@@ -19,10 +20,15 @@
     <h2 class="subtitle">"The best virtual recipe book"</h2>
   </main>
 
-  <div class="card card-recommendation mb-3 card-margin" >
+     <searchbar-component></searchbar-component>
+
+
+  
+
+<!--   <div class="card card-recommendation mb-3 card-margin" >
     <input type="text" id="search"/>
     <button id="button">Search</button>
-  </div>
+  </div> -->
 
   <!-- RECOMMENDATION -->
   <div class="card card-recommendation mb-3 card-margin" >

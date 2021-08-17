@@ -90,7 +90,7 @@
         let linea = 3,
             html = '<table><tr>';
         for(celda = 0; celda<lista.length; celda++){
-            html += `<td>${lista[celda]}</td>`;
+            html += `<td>• ${lista[celda]}</td>`;
             var next = celda+1;
             if (next%linea==0 && next!=lista.length) {
                 html += "</tr><tr>";
