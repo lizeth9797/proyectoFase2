@@ -1,1 +1,1 @@
-import "../results/results.scss"
+//import "../results/results.scss"
