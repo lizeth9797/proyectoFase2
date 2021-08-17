@@ -68,63 +68,109 @@ body {
 .img-chef{
   max-width:45%;
 }
-
-
-//  results html style
-  .centerResults {
-    text-align: center;
  
-}
-.containerBrowseByName{
-   
-    text-align: center;
-    font-family: 'Fjalla One', sans-serif;
-   color: $c4;
-}
-.alphabetList a {
-    color: $c2;
-}
-.alphabetList a:hover {
-    color: $black;
-}
-.story {
-    width: 75%;
-    margin: 0 auto;
-    // box-shadow: 0 3rem 8rem rgba($black, .1);
-    // background-color: rgba($black, .1);
-    border-radius: 3px;
-    padding: 6rem;
-    padding-left: 5rem;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    border:1px solid $c4;
-    // transform: skewX(-12deg);
-}
-.center {
-    text-align: center;
-    padding-bottom: 10px;
-}
-.containerResults {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+
+// RESULTS
 /*  CREAR UNA CLASE ESPECIFICA PARA EL DIV QUE SE QUIERE ALTERAR
 div {
     display: block;
 } */
-.containerResults:after {
-    clear: both;
+
+// .containerResults:after {
+//     clear: both;
+// }
+// .containerResults:before, .containerResults:after {
+//     display: table;
+//     content: " ";
+// }
+
+
+// //  recipes html style
+
+// .sectionrecipe{
+//     margin-top: 4rem;
+// }
+
+
+
+
+// //  results html style
+// .centerResults {
+//     text-align: center;
+ 
+// }
+// .containerBrowseByName{
+   
+//     text-align: center;
+//     font-family: 'Fjalla One', sans-serif;
+//    color: $c4;
+// }
+// .alphabetList a {
+//     color: $c2;
+// }
+// .alphabetList a:hover {
+//     color: $black;
+// }
+// .story {
+//     width: 75%;
+//     margin: 0 auto;
+//     // box-shadow: 0 3rem 8rem rgba($black, .1);
+//     // background-color: rgba($black, .1);
+//     border-radius: 3px;
+//     padding: 6rem;
+//     padding-left: 5rem;
+//     margin-bottom: 3rem;
+//     margin-top: 3rem;
+//     border:1px solid $c4;
+//     // transform: skewX(-12deg);
+// }
+// .center {
+//     text-align: center;
+//     padding-bottom: 10px;
+// }
+// .containerResults {
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
+ 
+
+.containerResults {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
 }
-.containerResults:before, .containerResults:after {
-    display: table;
-    content: " ";
+
+.styledClass{
+    display: flex;
+}
+
+.meals {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-gap: 50px;
+ 
+}
+
+.dish {
+     
+    position: relative;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+   
+    
 }
 
 
-//  recipes html style
+.dish img {
+width: 80%;
+height: 80%;
 
-.sectionrecipe{
-    margin-top: 4rem;
 }
+
