@@ -71,24 +71,19 @@ body {
 
 
 //  results html style
- 
   .centerResults {
     text-align: center;
  
 }
-
-
 .containerBrowseByName{
    
     text-align: center;
     font-family: 'Fjalla One', sans-serif;
    color: $c4;
 }
-
 .alphabetList a {
     color: $c2;
 }
-
 .alphabetList a:hover {
     color: $black;
 }
@@ -105,12 +100,10 @@ body {
     border:1px solid $c4;
     // transform: skewX(-12deg);
 }
-
 .center {
     text-align: center;
     padding-bottom: 10px;
 }
-
 .containerResults {
     padding-right: 15px;
     padding-left: 15px;
@@ -121,11 +114,17 @@ body {
 div {
     display: block;
 } */
-
 .containerResults:after {
     clear: both;
 }
 .containerResults:before, .containerResults:after {
     display: table;
     content: " ";
+}
+
+
+//  recipes html style
+
+.sectionrecipe{
+    margin-top: 4rem;
 }

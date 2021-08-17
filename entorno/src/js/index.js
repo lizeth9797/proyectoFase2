@@ -3,7 +3,6 @@ import "../../scss/main.scss"
 //import "../app/results/results.scss"
 
 
-
 getRandomMeal()
 .then(function (data) {
       let cardTitle=document.getElementById('recommendation-title');

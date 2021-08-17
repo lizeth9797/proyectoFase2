@@ -23,7 +23,7 @@ headerTemplate.innerHTML = `
 
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-  <a class="navbar-brand" href="#">   <img
+  <a class="navbar-brand" href="./index.html">   <img
   src="https://i.ibb.co/hxGrxRF/logo-1.png"
   alt="Matcha"/></a>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,10 +38,6 @@ headerTemplate.innerHTML = `
   </div>
 </div>
 </nav>
-
-
-
-
 `;
 
 class Header extends HTMLElement {
