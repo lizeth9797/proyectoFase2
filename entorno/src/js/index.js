@@ -1,7 +1,6 @@
-//import "../../src/css/output.css"
 import { Tooltip, Toast, Popover } from 'bootstrap';
-//import "../css/output.css"
 import "../../scss/main.scss"
+//import "../app/results/results.scss"
 
 
 
