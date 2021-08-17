@@ -20,12 +20,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'countries.html',
       template: './src/app/countries/countries.html'
-    }),
+    })*/,
     new HtmlWebpackPlugin({
       filename: 'recipe.html',
       template: './src/app/recipe/recipe.html'
-    }),*/
-    ,
+    }),
     new HtmlWebpackPlugin({
       filename: 'results.html',
       template: './src/app/results/results.html'
