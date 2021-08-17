@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap');
 
 
-.body {
+/* .body {
     background-color: yellow;
-
 }
-
+ */
  
+/*CREAR UNA CLASE ESPECIFICA PARA EL DIV QUE SE QUIERE ALTERAR  
  div{
     background-color: $c3;
 }
-
+ */
 .containerBrowseByName{
    
     text-align: center;
@@ -51,10 +51,10 @@
     margin-right: auto;
     margin-left: auto;
 }
-
+/*  CREAR UNA CLASE ESPECIFICA PARA EL DIV QUE SE QUIERE ALTERAR
 div {
     display: block;
-}
+} */
 
 .containerResults:after {
     clear: both;
