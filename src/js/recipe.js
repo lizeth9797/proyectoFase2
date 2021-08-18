@@ -217,3 +217,5 @@ getRecipeById(url)
     loadRecipe(data)
   })
 
+const probando = localStorage.getItem('idMeal');
+console.log('selecionado:',probando)
