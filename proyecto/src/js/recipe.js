@@ -1,7 +1,5 @@
+import '../js/header'
 import '../css/recipe.scss'
-
-
-console.log('hola' )
 
 function loadRecipe(data){
 
@@ -93,9 +91,17 @@ function loadRecipe(data){
     const instructionsOl = document.querySelector('#instructions-div > ol')
 
     // Creación de lista de ingredientes
-    for (instruction of splitedInstructions) {   
-        let instructionBullet = document.createElement('li');
+/*     for (instruction of splitedInstructions) {   
+        let instructionBullet = document.createElement('li')
         let instructionText = document.createTextNode(instruction + '.')
+        instructionBullet.appendChild(instructionText)
+        instructionsOl.appendChild(instructionBullet)
+    }
+ */
+
+    for (let j=0; j<splitedInstructions.length;j++){
+        let instructionBullet = document.createElement('li');
+        let instructionText = document.createTextNode(splitedInstructions[j] + '.')
         instructionBullet.appendChild(instructionText)
         instructionsOl.appendChild(instructionBullet)
     }

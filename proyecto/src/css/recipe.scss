@@ -1,4 +1,6 @@
 @use 'global' as *;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap');
+
 //@import '../../../node_modules/bootstrap/scss/bootstrap';
 body {
     background-color: $body-color;
@@ -11,9 +13,11 @@ h5, h1 {
 
 h5{
     font-size: 27px;
+    font-family: 'Fjalla One', sans-serif;
+
 }
 h1{
-    font-family: cursive;
+    font-family: 'Anton', sans-serif;
 }
 
 li {
@@ -24,17 +28,20 @@ html {
 	box-sizing: border-box;
 }
 
-
+.card-body{
+    background-color: $c3;
+}
 
 #recipe-div {
-    background-color: $c1;
+    background-color: $c5;
     padding: 5%;
 }
 
 .card {
     padding: 2%;
     border-style: solid;
-    border-color: lightgray;
+    border-color: $black;
+    background-color: $black;
 }
 
 #ingredients-list img{

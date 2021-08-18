@@ -1,8 +1,6 @@
-//import '../css/styles.css'
-
 import { Tooltip, Toast, Popover } from 'bootstrap';
-//import "../../css/main.scss"
-import '../css/main.scss'
+import '../css/main.scss';
+import '../js/header'
 //import "../app/results/results.scss"
 //import "../app/recipe/recipe.js"
 localStorage.setItem('idMeal', '52867');

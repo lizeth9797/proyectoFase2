@@ -3,10 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
+  mode: 'development',
+  entry: ['@babel/polyfill', './src/js/recipe.js'],
   entry: {
     index: './src/js/index.js',
-    recipe: './src/js/recipe.js'
-    //recipe: ['@babel/polyfill','./src/js/recipe.js']
+    recipe: './src/js/recipe.js',
+    header: './src/js/header.js'
   },  output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'  
