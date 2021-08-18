@@ -1,0 +1,132 @@
+@use 'global' as *;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: $body-color;
+}
+.welcome{
+    padding-top: 4.5rem;
+}
+.title{
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    color: $c4;
+}
+.subtitle{
+    padding-top: rem;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+}
+.card-recommendation{
+    background-color: $c3;
+}
+.card-body-recommendation{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+}
+.card-body-recommendation a:hover{
+    color: $c4;
+}
+.card-title-recommendation{
+    color: $black;
+    text-decoration: none;
+}
+.img-fluid-recommendation{
+    height: 20rem;
+    margin-top: 2.5rem;
+}
+.card-margin{
+    margin-top: 2.5rem;
+}
+.title-card{
+    position: absolute; 
+    left: 3.5rem; 
+    top: -1.5rem; 
+    background-color: $black; 
+    padding: 1rem; 
+    font-weight:bold;
+    color: $c4;
+}
+.rounded-circle {
+  border-radius: 50%!important;
+}
+.card-bg{
+  background-color: transparent;
+  border:none;
+  align-items: center;
+}
+.card-body-chef{
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Anton', sans-serif;
+}
+.img-chef{
+  max-width:45%;
+}
+.searchbar{
+    text-align:center;
+}
+
+//  results html style
+  .centerResults {
+    text-align: center;
+ 
+}
+.containerBrowseByName{
+   
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+   color: $c4;
+}
+.alphabetList a {
+    color: $c2;
+}
+.alphabetList a:hover {
+    color: $black;
+}
+.story {
+    width: 75%;
+    margin: 0 auto;
+    // box-shadow: 0 3rem 8rem rgba($black, .1);
+    // background-color: rgba($black, .1);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    border:1px solid $c4;
+    // transform: skewX(-12deg);
+}
+.center {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.containerResults {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*  CREAR UNA CLASE ESPECIFICA PARA EL DIV QUE SE QUIERE ALTERAR
+div {
+    display: block;
+} */
+.containerResults:after {
+    clear: both;
+}
+.containerResults:before, .containerResults:after {
+    display: table;
+    content: " ";
+}
+
+
+//  recipes html style
+
+.sectionrecipe{
+    margin-top: 4rem;
+}

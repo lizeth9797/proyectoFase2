@@ -1,0 +1,82 @@
+@use 'global' as *;
+//@import '../../../node_modules/bootstrap/scss/bootstrap';
+body {
+    background-color: $body-color;
+}
+
+h5, h1 {
+    text-align: center;
+    font-family: cursive;
+}
+
+h5{
+    font-size: 27px;
+}
+h1{
+    font-family: cursive;
+}
+
+li {
+
+}
+
+html {
+	box-sizing: border-box;
+}
+
+
+
+#recipe-div {
+    background-color: $c1;
+    padding: 5%;
+}
+
+.card {
+    padding: 2%;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+#ingredients-list img{
+    width: 100%;
+
+}
+
+#presentation-div img {
+    width: 100%;
+}
+
+
+
+#recipe-div{
+    justify-content: center;
+    align-items: center;
+}
+
+
+#recipe-section {
+    width: 100%;
+}
+
+
+
+
+#video-div {
+
+    margin-top: 2%;
+
+}
+
+
+#conjunto-div > div {
+    margin: 1%;
+}
+
+
+#ingredients-div{
+    margin-top: 5%;
+}
+
+#ingredients-list .col{
+    justify-content: flex-end;
+}
