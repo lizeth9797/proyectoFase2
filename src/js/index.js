@@ -1,10 +1,9 @@
 import { Tooltip, Toast, Popover } from 'bootstrap';
 import '../css/main.scss';
 import '../js/header'
-
 //import "../app/results/results.scss"
 //import "../app/recipe/recipe.js"
-//localStorage.setItem('idMeal', '52867');
+localStorage.setItem('idMeal', '52867');
 getRandomMeal()
 .then(function (data) {
       let cardTitle=document.getElementById('recommendation-title');
@@ -44,21 +43,53 @@ function algo(){
  
 
 
-const random = document.getElementById('random');
+const searchInput = document.getElementById('search');
 const searchButton = document.getElementById('searchButton');
-const input = document.getElementById('search');
 searchButton.addEventListener('click', searchGIFs);
 
 function searchGIFs() {
-  const search = input.value;
+  const search = searchInput.value;
   console.log('SEARCH',search)
   if(search) {
-    localStorage.setItem('inputSearch',search)
-    console.log('storage y link')
-    window.location('./results.html');
+    const formattedSearch = formatSearchString(search);
+    const url = buildUrl(formattedSearch);
+    console.log(url)
+    return getGiphyResults(url)
+      .then(function(gifs) {
+        console.log(gifs)
+/*         gifs.forEach(function(gif) {
+          const img = document.createElement('img');
+          img.src = gif.images.fixed_height.url;
+          img.alt = gif.title;
 
-
-  }else{
-    alert("Please enter the name of a meal");
+          results.appendChild(img)
+        }) */
+      })
   }
 }
+
+function formatSearchString(search) {
+  return search.replace(/ /g, '+');
+}
+
+function buildUrl (search) {
+  const baseUrlS = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+  return `${baseUrlS}${search}`;
+}
+
+function getGiphyResults(url) {
+  return fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      return data.data
+    })
+    .catch(function(err) {
+      console.log(err)
+    })
+}
+
+
+
+

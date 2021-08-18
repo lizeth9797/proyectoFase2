@@ -7,47 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resultados de la busqueda</title>
   <script src="./js/header.js" type="text/javascript" defer></script>
-
-
 </head>
 
 <body>
-  <!-- <searchbar-component></searchbar-component> -->
+  <header-component ></header-component>
 
-
-  <header-component></header-component>
-
-
-  <!-- results search bar  -->
-
-  <div class="containerResults">
-    <div class="styledClass">
-      <form class="styledCF" id="submit">
+   <!-- results search bar  -->
+  <div class = "containerResults" >
+     <div class="styledClass">
+       <form class="styledCF" id="submit">
         <input type="text" id="search" name="search" placeholder="Search for a meal">
-        <button type="submit">&#128269;</button>
-        <button id='random' type="submit">&#10536;</button>
+        <button id="searchButton" type="submit">&#128269;</button>
+        <button id= 'random' type="submit">&#10536;</button>
       </form>
+     </div>
+
+      <div id="resultsTitle">
+      </div>
+      <div id="meals" class="meals" ></div>
+     <div id="dish"> </div>
+
     </div>
-
-    <!-- results Display  -->
-    <div id="resultsTitle">
-    </div>
-    <div id="meals" class="meals"></div>
-    <div id="dish"> </div>
-
-  </div>
-
+ 
 
   <!-- BROWSE BY alphabet -->
-  <div class="containerBrowseByName browseLetter">
 
+  
+  <!-- BROWSE BY alphabet -->
+  <div class="containerBrowseByName browseLetter">
+    
   </div>
 
+ 
 
-
-  <!-- <script src="./results.js"></script> -->
-<!-- 
-  <script src="../components/header/header.js" type="text/javascript" defer></script> -->
+ 
 </body>
-
 </html>

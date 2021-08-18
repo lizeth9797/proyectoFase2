@@ -9,8 +9,8 @@ const resultsTitle = document.getElementById("resultsTitle");
 const meals = document.getElementById("meals");
 const dish = document.getElementById("dish");
 const inputSearch = localStorage.getItem('inputSearch');
-
-
+ 
+ 
 // this function lets us get the results from the input text and display it on a grid
 function lookUp(event) {
   event.preventDefault();
@@ -41,18 +41,48 @@ function lookUp(event) {
               return `
                       
                         <div class="dish">
-                        <h2>${meal.strMeal}</h2>
+
+                        <a href="./recipe.html" id="selected" value="${meal.idMeal}" >${meal.strMeal}</a>
+                                                   <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+                                                </div>
+                                              `;
+                                   })
+                                   .join("");
+                                 }
+                              });
+                           }
+                         }
+                         searchButton.addEventListener('click', lookUp);
+                        
+
+//random search
+function Random(event) {
+  event.preventDefault();
+  dish.innerHTML = "";
+  fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+       const randomMeal=data.meals[0].idMeal 
+       localStorage.setItem('idMeal', randomMeal)
+        resultsTitle.innerHTML = `
+        <h2> Random meal: </h2>`;
+        meals.innerHTML = data.meals
+            .map(function (meal) {
+              return `   
+                        <div class="dish">
+                        <a href="./recipe.html">${meal.strMeal}</a>
                           <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-                     
                         </div>
                       `;
             })
-            .join("");
-        }
+            .join("");        
       });
-  }
 }
-submit.addEventListener("submit", lookUp);
+random.addEventListener('click', Random);
+
+
 
 //from here Browse by name
 
@@ -104,18 +134,19 @@ for (let button of Buttons) {
           `<h2>Sorry, there are no recipes to show</h2>`;
         } else {
           meals.innerHTML = data.meals
-            .map(function (meal) {
-              return `
-                     
-                       <div class="dish">
-                       <h2>${meal.strMeal}</h2>
-                         <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+          .map(function (meal) {
+            return `
                     
-                       </div>
-                     `;
-            })
-            .join("");
-        }
+                      <div class="dish">
+
+                      <a href="./recipe.html" id="selected" value="${meal.idMeal}" >${meal.strMeal}</a>
+                                                 <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+                                              </div>
+                                            `;
+                                 })
+                                 .join("");
+                               }
+     
       });
   });
 }
