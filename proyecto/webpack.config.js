@@ -8,7 +8,10 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     recipe: './src/js/recipe.js',
-    header: './src/js/header.js'
+    header: './src/js/header.js',
+    results: './src/js/results.js',
+    countries: './src/js/countries.js',
+    categories: './src/js/categories.js'
   },  output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'  
@@ -28,6 +31,21 @@ module.exports = {
       filename: 'recipe.html',
       template: './src/recipe.html',
       chunks:['recipe']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'results.html',
+      template: './src/results.html',
+      chunks:['results']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'countries.html',
+      template: './src/countries.html',
+      chunks:['countries']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'categories.html',
+      template: './src/categories.html',
+      chunks:['categories']
     })  
   ],
   module: {
