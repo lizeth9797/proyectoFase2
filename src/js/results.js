@@ -9,51 +9,50 @@ const resultsTitle = document.getElementById("resultsTitle");
 const meals = document.getElementById("meals");
 const dish = document.getElementById("dish");
 const inputSearch = localStorage.getItem('inputSearch');
- 
- 
-// this function lets us get the results from the input text and display it on a grid
+
+//one or more results
 function lookUp(event) {
-  event.preventDefault();
   dish.innerHTML = "";
-  const searchValue = search.value;
-  //    alert(searchValue);
-  const isEmpty = (str) => !searchValue.trim().length;
-  // we check if nothing has been written
-  if (isEmpty(this.value)) {
-    alert("Please enter the name of a meal");
-  } else {
-    // we get the data from the API
+  const searchValue = inputSearch;
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`)
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
         console.log(data);
-        // we display it on the grid
         resultsTitle.innerHTML = `
         <h2> Results for ${searchValue} : </h2>`;
-
         if (data.meals === null) {
+          resultsTitle.innerHTML = 
           `<h2>Sorry, there are no recipes to show</h2>`;
         } else {
+
           meals.innerHTML = data.meals
             .map(function (meal) {
-              return `
-                      
+              return `   
                         <div class="dish">
+                        <a href="./recipe.html" id="${meal.idMeal}" " >${meal.strMeal}
+                          <img src="${meal.strMealThumb}" alt="${meal.strMeal}" /></a>
+                        </div>
+                      `;
+            })
+            .join("");
+            const div=document.getElementsByClassName('dish')
+           
+            for (let i=0; i<div.length;i++){              
+              div[i].addEventListener('click',showRecipe)
+            }
+            function showRecipe(e){
+            let idMeal=e.currentTarget.childNodes[1].id
+            localStorage.setItem('idMeal', idMeal)
+            }
+        }
+      });
+  
+}
+lookUp()
 
-                        <a href="./recipe.html" id="selected" value="${meal.idMeal}" >${meal.strMeal}</a>
-                                                   <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-                                                </div>
-                                              `;
-                                   })
-                                   .join("");
-                                 }
-                              });
-                           }
-                         }
-                         searchButton.addEventListener('click', lookUp);
-                        
+//searchButton.addEventListener('click', lookUp);
 
 //random search
 function Random(event) {
@@ -84,6 +83,9 @@ random.addEventListener('click', Random);
 
 
 
+//A to Z
+
+
 //from here Browse by name
 
 const dLetter = document.querySelector(".containerBrowseByName");
@@ -100,7 +102,7 @@ for (let x = 0; x < alphabet.length; x++) {
     class="containerBrowseByName browseLetter"
     value="${alphabet[x]}"
     id="${alphabet[x]}">
-        <h6 browseLetterS="${alphabet[x]}">
+        <h6  browseLetterS="${alphabet[x]}">
         ${alphabet[x]}</h6>
     </button>
     `;
@@ -135,17 +137,23 @@ for (let button of Buttons) {
         } else {
           meals.innerHTML = data.meals
           .map(function (meal) {
-            return `
-                    
-                      <div class="dish">
-
-                      <a href="./recipe.html" id="selected" value="${meal.idMeal}" >${meal.strMeal}</a>
-                                                 <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-                                              </div>
-                                            `;
-                                 })
-                                 .join("");
-                               }
+            return `   
+                    <div class="dish">
+                    <a href="./recipe.html" id="${meal.idMeal}" " >${meal.strMeal}
+                      <img src="${meal.strMealThumb}" alt="${meal.strMeal}" /></a>
+                    </div>
+                  `;
+            })
+            .join("");
+            const div=document.getElementsByClassName('dish')
+            for (let i=0; i<div.length;i++){              
+              div[i].addEventListener('click',showRecipe)
+            }
+            function showRecipe(e){
+            let idMeal=e.currentTarget.childNodes[1].id
+            localStorage.setItem('idMeal', idMeal)
+            }
+          }
      
       });
   });

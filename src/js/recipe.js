@@ -213,7 +213,6 @@ const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
 
 getRecipeById(url)
   .then(function (data) {
-    console.log('Id:',idMeal)
     loadRecipe(data)
   })
 

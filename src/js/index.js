@@ -1,9 +1,7 @@
 import { Tooltip, Toast, Popover } from 'bootstrap';
 import '../css/main.scss';
 import '../js/header'
-//import "../app/results/results.scss"
-//import "../app/recipe/recipe.js"
-localStorage.setItem('idMeal', '52867');
+
 getRandomMeal()
 .then(function (data) {
       let cardTitle=document.getElementById('recommendation-title');
@@ -31,65 +29,48 @@ function getYoutubeUrl(data) {
   return `${baseImageUrl}/${url}`;
 }
 
-// AQUI EMPIEZA LA LOGICA 
-
-/* const searchInput = document.getElementById('search');
+//BARRA DE BUSQUEDA
+const random = document.getElementById('random');
 const searchButton = document.getElementById('searchButton');
-searchButton.addEventListener('click', algo);
-function algo(){
-    const a=searchInput.value;
-    console.log(a)
-}  */
- 
+const input = document.getElementById('search');
+searchButton.addEventListener('click', searchAction);
 
-
-const searchInput = document.getElementById('search');
-const searchButton = document.getElementById('searchButton');
-searchButton.addEventListener('click', searchGIFs);
-
-function searchGIFs() {
-  const search = searchInput.value;
-  console.log('SEARCH',search)
+function searchAction() {
+  event.preventDefault();
+  const search = input.value;
   if(search) {
-    const formattedSearch = formatSearchString(search);
-    const url = buildUrl(formattedSearch);
-    console.log(url)
-    return getGiphyResults(url)
-      .then(function(gifs) {
-        console.log(gifs)
-/*         gifs.forEach(function(gif) {
-          const img = document.createElement('img');
-          img.src = gif.images.fixed_height.url;
-          img.alt = gif.title;
-
-          results.appendChild(img)
-        }) */
-      })
+    localStorage.setItem('inputSearch',search)
+    location.replace("./results.html")
+  }else{
+    alert("Please enter the name of a meal");
   }
 }
 
-function formatSearchString(search) {
-  return search.replace(/ /g, '+');
+function Random(event) {
+  event.preventDefault();
+  //dish.innerHTML = "";
+  fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+       const randomMeal=data.meals[0].idMeal 
+       localStorage.setItem('idMeal', randomMeal)
+       location.replace("./recipe.html")
+
+/*         resultsTitle.innerHTML = `
+        <h2> Random meal: </h2>`;
+        meals.innerHTML = data.meals
+            .map(function (meal) {
+              return `   
+                        <div class="dish">
+                        <a href="./recipe.html">${meal.strMeal}</a>
+                          <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+                        </div>
+                      `;
+            })
+            .join("");   */      
+      });
 }
-
-function buildUrl (search) {
-  const baseUrlS = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
-  return `${baseUrlS}${search}`;
-}
-
-function getGiphyResults(url) {
-  return fetch(url)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      return data.data
-    })
-    .catch(function(err) {
-      console.log(err)
-    })
-}
-
-
-
+random.addEventListener('click', Random);
 
