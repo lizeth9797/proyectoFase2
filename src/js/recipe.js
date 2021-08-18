@@ -216,3 +216,5 @@ getRecipeById(url)
     loadRecipe(data)
   })
 
+  const iddd = localStorage.getItem('idd');
+console.log('mira',iddd)

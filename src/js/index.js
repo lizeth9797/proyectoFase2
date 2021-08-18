@@ -11,6 +11,9 @@ getRandomMeal()
       const liga=getYoutubeUrl(data)
       const link = document.getElementById('youtube-video');
       link.src=liga;
+      const div=document.getElementsByClassName('card-body-recommendation');
+      cardTitle.id=data.meals[0].idMeal
+      div[0].addEventListener('click',recomendation)
 })  
   
 function getRandomMeal() {
@@ -28,6 +31,12 @@ function getYoutubeUrl(data) {
   //console.log(url);
   return `${baseImageUrl}/${url}`;
 }
+
+function recomendation(e){
+  let idM=e.currentTarget.childNodes[1].id
+  localStorage.setItem('idMeal', idM) 
+}
+
 
 //BARRA DE BUSQUEDA
 const random = document.getElementById('random');
@@ -56,20 +65,7 @@ function Random(event) {
       .then(function (data) {
        const randomMeal=data.meals[0].idMeal 
        localStorage.setItem('idMeal', randomMeal)
-       location.replace("./recipe.html")
-
-/*         resultsTitle.innerHTML = `
-        <h2> Random meal: </h2>`;
-        meals.innerHTML = data.meals
-            .map(function (meal) {
-              return `   
-                        <div class="dish">
-                        <a href="./recipe.html">${meal.strMeal}</a>
-                          <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-                        </div>
-                      `;
-            })
-            .join("");   */      
+       location.replace("./recipe.html") 
       });
 }
 random.addEventListener('click', Random);
