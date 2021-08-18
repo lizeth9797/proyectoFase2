@@ -82,10 +82,15 @@ body {
     text-align: center;
     max-width: 800px;
 
-  
+    padding-top: 4.5rem;
      
 }
 
+
+.containerResults h2 {
+      
+ 
+}
 .styledClass{
     display: flex;
 }
@@ -126,3 +131,8 @@ height: 70%;
     
 }
 
+
+.containerBrowseByName h3 {
+      
+    font-size: .7rem;
+}
