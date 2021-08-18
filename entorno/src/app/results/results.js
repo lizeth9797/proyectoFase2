@@ -21,7 +21,8 @@ function lookUp(event) {
       })
       .then(function (data) {
         console.log(data);
-        resultsTitle.innerHTML = `<h2> Results for ${searchValue} : </h2>`;
+        resultsTitle.innerHTML = `
+        <h2> Results for ${searchValue} : </h2>`;
 
         if (data.meals === null) {
           `<h2>Sorry, there are no recipes to show</h2>`;

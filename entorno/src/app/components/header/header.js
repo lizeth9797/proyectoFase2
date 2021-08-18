@@ -21,7 +21,7 @@ headerTemplate.innerHTML = `
 
 </style>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar  navbar-expand-lg fixed-top">
 <div class="container-fluid">
   <a class="navbar-brand" href="./index.html">   <img
   src="https://i.ibb.co/hxGrxRF/logo-1.png"
