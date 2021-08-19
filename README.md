@@ -1,9 +1,9 @@
 # Proyecto Fase 2 
 Proyecto Final de la Fase 2 BEDU-Santander
 
-~~~
+
 https://themealdb-bedu.netlify.app/ 
-~~~
+
 
 ## Integrantes del equipo
 * Castillo Del Valle Gabriela Aideé
